@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+body {
+	font-family: Roboto, sans-serif;
+	background-color: #efefef;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	color: #111;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 5px;
+}
+
+a:hover {
+	background-color: #111;
+	color: #efefef;
+}
+
+/* Global Classes */
+
+.container {
+	max-width: 1000px;
+	margin: auto;
+}
+
+.btn {
+	height: 40px;
+	padding: 0 20px;
+	font-size: 1rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	border: 3px orange solid;
+	border-radius: 3px;
+	background: transparent;
+	cursor: pointer;
+}
+
+.grid {
+	display: flex;
+}
+
+
+/* Header */
+
+header {
+	position: fixed;
+	top: 0;
+	min-height: 75px;
+	padding: 0 20px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: #fff;
+}
+
+.logo {
+	width: 60vw;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	max-width: 250px;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	margin-left: 20px;
+}
+
+nav {
+	font-weight: 700;
+}
+
+header ul {
+	width: 35vw;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+/* Video Section */
+
+#intro {
+	margin-top: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+iframe {
+	max-width: 560px;
+	width: 100%;
+}
+
+/* Get In Touch Section */
+
+#get-in-touch {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: 250px;
+}
+
+#get-in-touch h2 {
+	margin-bottom: 20px;
+}
+
+#get-in-touch input[type="email"]{
+	max-width: 275px;
+	width: 100%;
+	padding: 5px;
+}
+
+#get-in-touch input[type="submit"]{
+	max-width: 150px;
+	width: 100%;
+	height: 35px;
+	margin: 15px 0;
+	border: none;
+	background-color: #f1c404;
+}
+
+#get-in-touch input[type="submit"]:hover {
+	background-color: orange;
+	transition: background-color 500ms;
+}
+
+
+/* Media Queries */
+
+@media(max-width: 650px){
+	.logo {
+		margin-top: 15px;
+		width: 100%;
+		position: relative;
+	}
+
+	header ul {
+		flex-direction: column;
+	}
+
+	#intro {
+		margin-top: 300px;
+	}
+
+	.desc {
+		margin-top: 0;
+	}
+}
+
+/* Features Section */
+
+#features {
+	margin-top: 30px;
+}
+
+.icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 125px;
+	width: 20vw;
+	color: darkorange;
+}
+
+.desc {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 125px;
+	width: 80vw;
+}
+
+
+/* Prices */
+
+#prices {
+	margin-top: 60px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+#front-end, #back-end, #stack {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	width: calc(100% / 3);
+	margin: 10px;
+	border: 1px solid #333;
+	border-radius: 3px;
+}
+
+.level {
+	background-color: #ddd;
+	color: #111;
+	padding: 15px 0;
+	width: 100%;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+#prices h2 {
+	margin-top: 30px;
+}
+
+#prices ol {
+	padding: 0;
+	margin-top: 15px;
+}
+
+#prices ol li {
+	padding: 5px 0;
+}
+
+#prices button {
+	border: 0;
+	margin: 15px 0;
+	background-color: #f1c404;
+	font-weight: 400;
+}
+
+#prices button:hover {
+	background-color: orange;
+	transition: background-color 500ms;
+}
+
+
+/* Footer */
+
+footer {
+	margin-top: 50px;
+	background-color: #fff;
+	padding: 20px;
+}
+
+footer ul {
+	display: flex;
+	justify-content: flex-end;
+}
+
+footer ul li {
+	padding: 0 10px;
+}
+
+footer span {
+	display: flex;
+	justify-content: flex-end;
+	color: #444;
+	font-size: 0.9em;
+	margin-right: 15px;
+}
+
+@media(max-width: 800px){
+	#prices {
+		flex-direction: column;
+	}
+	#front-end, #back-end, #stack {
+		max-width: 300px;
+		width: 100%;
+		margin: 0 auto;
+		margin-bottom: 10px;
+	}
+}
+
+@media(max-width: 600px){
+	header {
+		flex-wrap: wrap;
+	}
+
+	img {
+		margin: 0 auto;
+	}
+
+	nav {
+		margin-top: 10px;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		padding: 0 50px;
+	}
+
+	li {
+		padding-bottom: 5px;
+	}
+}
+
+@media(max-width: 550px){
+	.icon {
+		display: none;
+	}
+
+	.desc {
+		width: 100%;
+		text-align: center;
+		padding: 0;
+		height: 150px;
+	}
+}
+
+
+
